@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index  # indexアクションの定義
-    @posts = Post.all  # すべてのレコードを@postsに代入
+    @posts = Post.all.order(id: "DESC")  # すべてのレコードを@postsに代入
   end
 
   def new
